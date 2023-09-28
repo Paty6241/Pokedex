@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <nav class="wrapper">
+        <form action="">
+            <h1><img src="img/logo.png"></h1>
+            <div class="input-box">
+                <label for="">Usuario</label>
+                <input type="text" name="u" id="">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="input-box">
+                <label for="">Contraseña</label>
+                <input type="password" name="c" id="">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+            </div>
+            <div class="remember-forgot">
+                <a href="#">¿Olvidaste tú contraseña?</a>
+                <input type="button" value="Ingresar" onclick="login(this.form)">
+            </div>
+            <div class="register-link">
+                <p>¿No tienes una cuenta de Banco? <a href="#">Registrate</a></p>
+            </div>
+        </form>
+    </nav>
+    <script>
+        function login(form){
+            if (form.u.value=="paty") {
+                if (form.c.value=="1234") {
+                    location="index.html";
+                } else {
+                    alert("Error de Password");
+                }
+            } else {
+                alert("Error de Usuario");
+            }
+        }
+    </script>
+</body>
+</html>
